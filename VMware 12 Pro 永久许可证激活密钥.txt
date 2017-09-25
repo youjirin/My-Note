@@ -1,0 +1,52 @@
+VMware 12 Pro 永久许可证激活密钥
+
+5A02H-AU243-TZJ49-GTC7K-3C61N
+VF5XA-FNDDJ-085GZ-4NXZ9-N20E6
+UC5MR-8NE16-H81WY-R7QGV-QG2D8
+ZG1WH-ATY96-H80QP-X7PEX-Y30V4
+AA3E0-0VDE1-0893Z-KGZ59-QGAVF
+
+
+在Linux下安装Python的操作相当简单，按如下步骤操作即可：
+
+1、在官方网站下载python安装包，这里注意python.org/download路径被屏蔽，需要使用http://www.python.org/页面上的中文“下载”链接进行下载。
+
+这里下载了python最新的3.2.2版本：Python-3.2.2.tgz
+
+下载后，文件目录在/home/python/下，这也是我python的安装目录
+
+2、  解压：
+
+[root@www.linuxidc.com python]# tar zxvf    Python-3.2.2.tgz
+
+3、  打开安装目录，执行：
+
+[root@www.linuxidc.com python]# cd Python-3.2.2
+
+[root@www.linuxidc.com Python-3.2.2]#./configure
+
+[root@www.linuxidc.com Python-3.2.2]# make
+
+[root@www.linuxidc.com Python-3.2.2]# makeinstall
+
+值此，安装完成。
+
+4、  但此时输入”python”命令，仍然显示是旧版本的，这就需要创建软连接：
+
+[root@www.linuxidc.com bin]# cd /usr/bin
+
+[root@www.linuxidc.com bin]# ll |grep python
+
+[root@www.linuxidc.com bin]# rm -rf python
+
+[root@www.linuxidc.com bin]# ln -s /home/python/Python-3.2.2/python python
+
+[root@www.linuxidc.com bin]# python
+
+Python 3.2.2 (default, Oct 26 2011, 23:40:16)
+
+[GCC 4.1.2 20071124 (Red Hat 4.1.2-42)] on linux2
+
+Type "help", "copyright", "credits" or"license" for more information.
+
+>>>
